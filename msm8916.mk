@@ -51,9 +51,9 @@ PRODUCT_COPY_FILES += \
 # System Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    persist.radio.apm_sim_not_pwdn=1 \
-    persist.radio.sib16_support=1 \
-    ro.sf.lcd_density=320 \
+    persist.radio.apm_sim_not_pwdn=0 \
+    persist.radio.sib16_support=0 \
+    ro.sf.lcd_density=160 \
     ro.sys.sdcardfs=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -66,11 +66,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_WIDTH := 800
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
@@ -135,9 +135,9 @@ PRODUCT_PACKAGES += \
     libtinyxml
 
 # FM
-PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
+#PRODUCT_PACKAGES += \
+    #FMRadio \
+    #libfmjni
 
 # Gello
 PRODUCT_PACKAGES += \
